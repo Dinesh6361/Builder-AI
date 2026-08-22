@@ -6,9 +6,12 @@ import HomePage from './pages/HomePage'
 import BuilderPage from './pages/BuilderPage'
 import PreviewPage from './pages/PreviewPage'
 
+import { Toaster } from 'react-hot-toast'
 const App = () => {
   return (
-   <Routes>
+    <>
+    <Toaster/>
+    <Routes>
     {/* login routes */}
     <Route element={<GuestLayout />}>
     <Route path='/login' element={<AuthPage  mode="login"/>} />
@@ -28,6 +31,9 @@ const App = () => {
     </Route>
 
    </Routes>
+    </>
+   
+   
   )
 }
 
